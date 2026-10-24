@@ -1,6 +1,6 @@
 [← Back to portfolio](https://bagusbernadi.github.io/)
 
-# Project 15: SPC Control Chart & Capability Dashboard
+# Project 15: SPC Control Chart & Capability Dashboard with Automated Alerts
 
 **Status: Design (rancangan).** Halaman rancangan ada di [`index.html`](index.html). Analisis, dashboard, dan angka hasil belum dikerjakan, sehingga bagian Analysis, Recommendation, dan Impact di bawah masih kosong.
 
