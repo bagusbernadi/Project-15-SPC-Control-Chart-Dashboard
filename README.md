@@ -21,7 +21,7 @@ Rancangan memecahnya menjadi 14 pertanyaan (9 Utama, 4 Pendukung, 1 Tambahan) da
 
 ## 2. Data
 
-- Data simulasi meniru format file CSV mesin push test: satu file per run, beberapa sampel per run, gaya dalam gram, spec 1500–19000 g. Generator Python akan disertakan.
+- Data simulasi meniru format file CSV mesin push test: satu file per run, beberapa sampel per run, gaya dalam gram, spec 1500–19000 g. Generator: `scripts/generate_push_test.py`. Versi data: v1. Tanggal dibuat: 28 Okt 2026. Seed: 15260401. Hasil v1: 600 file CSV (3.000 baris hasil ukur).
 - Ukuran (perkiraan): 2 model (Model A, Model B) × 2 kondisi (sebelum dan sesudah oven), ±600 run, ±3.000 baris hasil ukur, ±3 bulan.
 - Rencana tabel: `test_run`, `measurement`, `spec_limit`, `alert_log`.
 
