@@ -1,0 +1,17 @@
+stream,kolom,sql,pandas,selisih,sama
+Model A | after_oven,n_sampel,780.0,780.0,0.0,True
+Model A | after_oven,mean_g,8585.112307692307,8585.112307692307,0.0,True
+Model A | after_oven,sd_g,980.430402370292,980.430402370292,0.0,True
+Model A | after_oven,n_ng,0.0,0.0,0.0,True
+Model A | before_oven,n_sampel,690.0,690.0,0.0,True
+Model A | before_oven,mean_g,7149.0202898550715,7149.020289855072,9.094947017729282e-13,True
+Model A | before_oven,sd_g,1006.2568758220968,1006.2568758220968,0.0,True
+Model A | before_oven,n_ng,0.0,0.0,0.0,True
+Model B | after_oven,n_sampel,710.0,710.0,0.0,True
+Model B | after_oven,mean_g,6496.620563380281,6496.620563380281,0.0,True
+Model B | after_oven,sd_g,2592.0939840436613,2592.0939840436613,0.0,True
+Model B | after_oven,n_ng,4.0,4.0,0.0,True
+Model B | before_oven,n_sampel,780.0,780.0,0.0,True
+Model B | before_oven,mean_g,6725.303205128202,6725.303205128205,3.637978807091713e-12,True
+Model B | before_oven,sd_g,957.1504983466402,957.1504983466402,0.0,True
+Model B | before_oven,n_ng,0.0,0.0,0.0,True

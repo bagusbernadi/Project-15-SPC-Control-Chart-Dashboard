@@ -2,7 +2,7 @@
 
 # Project 15: SPC Control Chart & Capability Dashboard with Automated Alerts
 
-**Status: SPC inti selesai (WIP, branch `project-15-build`). Dashboard dan GitHub Actions belum.**
+**Status: Analisis dan dashboard selesai (WIP, branch `project-15-build`). Belum di-deploy. GitHub Actions dan `check_std` belum.**
 
 **Status awal: Design (rancangan).** Halaman rancangan ada di [`index.html`](index.html). Analisis, dashboard, dan angka hasil belum dikerjakan, sehingga bagian Analysis, Recommendation, dan Impact di bawah masih kosong.
 
@@ -41,6 +41,7 @@ Data simulasi (600 run, 2.988 sampel valid, 592 run dipakai). Angka dari `src/02
 - Fakta 5 (data kotor): 15 file dengan entri log, sesuai ground truth.
 - False alarm di luar jendela fault: 2,3% run (9 dari 391) untuk X-bar, 0,5% (2 dari 391) untuk R.
 - Monte Carlo (2.000 replikasi, limit dari baseline): ARL0 sekitar 180 run (false alarm 0,56% per run). ARL1: 10,8 run untuk pergeseran 1σ, 3,3 untuk 2σ, 1,6 untuk 3σ.
+- Sensitivitas baseline (A1): dengan baseline 7 hari, false alarm X-bar 3,6% per run. Dengan 14 hari (default) 2,3%. Dengan 21 hari 1,9%, tetapi baseline 21 hari sudah memuat awal fault PT-02 (15 April). Deteksi F3 turun dari 4 ke 3 aliran. Itu sebabnya 14 hari dipilih sebagai baseline bersih terpanjang.
 
 **Catatan:** hasil ini dari data simulasi. Nilainya membuktikan metode bekerja pada fault yang ditanam, bukan kondisi pabrik nyata.
 
@@ -90,12 +91,12 @@ NG terhindari = run sebelum alert × unit per run × rate NG
 | Ingest dan cleaning (`src/01_ingest_clean.py`) | selesai, log di `outputs/parse_log.csv` |
 | SPC: limit baseline, Western Electric, Cp/Cpk CI, Cpk bergulir (`src/02_spc.py`) | selesai |
 | Validasi ground truth dan ARL (`src/03_validate.py`) | selesai |
-| Sensitivitas baseline 7 dan 21 hari | belum |
-| Load ke DuckDB dan SQL | belum |
-| Dashboard Streamlit 4 halaman + AppTest | belum |
+| Sensitivitas baseline 7, 14, 21 hari (`src/04_validate_baseline_sensitivity.py`) | selesai |
+| Load ke DuckDB dan SQL (`src/05_duckdb_load.py`, `sql/kpi.sql`) | selesai, 16 nilai cek silang sama |
+| Dashboard Streamlit 4 halaman (`dashboard/app.py`) + AppTest (`tests/test_dashboard.py`, 3 lulus) | selesai; belum di-deploy |
 | GitHub Actions alert (opsional) | belum; belum dijalankan di GitHub |
 | `report_lib.py`, `report.css`, `check_std` dari Project-4 | belum |
-| Uji dari nol dua kali | belum |
+| Uji dari nol dua kali (`run_all.sh`) | selesai, checksum identik |
 
 ## Struktur repository
 

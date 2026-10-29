@@ -1,0 +1,16 @@
+baseline,baseline_sampai_sebelum,metrik,nilai,n
+7 hari,2026-04-08,false alarm xbar per run,0.0364,439
+7 hari,2026-04-08,false alarm R per run,0.0046,439
+7 hari,2026-04-08,F1 aliran terdeteksi (xbar),1.0,1
+7 hari,2026-04-08,F2 aliran terdeteksi (xbar),1.0,1
+7 hari,2026-04-08,F3 aliran terdeteksi (xbar),4.0,4
+14 hari (default),2026-04-15,false alarm xbar per run,0.023,391
+14 hari (default),2026-04-15,false alarm R per run,0.0051,391
+14 hari (default),2026-04-15,F1 aliran terdeteksi (xbar),1.0,1
+14 hari (default),2026-04-15,F2 aliran terdeteksi (xbar),1.0,1
+14 hari (default),2026-04-15,F3 aliran terdeteksi (xbar),4.0,4
+21 hari,2026-04-22,false alarm xbar per run,0.019,369
+21 hari,2026-04-22,false alarm R per run,0.0027,369
+21 hari,2026-04-22,F1 aliran terdeteksi (xbar),1.0,1
+21 hari,2026-04-22,F2 aliran terdeteksi (xbar),1.0,1
+21 hari,2026-04-22,F3 aliran terdeteksi (xbar),3.0,4
