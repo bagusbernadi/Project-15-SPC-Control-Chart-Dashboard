@@ -2,7 +2,9 @@
 
 # Project 15: SPC Control Chart & Capability Dashboard with Automated Alerts
 
-**Status: Design (rancangan).** Halaman rancangan ada di [`index.html`](index.html). Analisis, dashboard, dan angka hasil belum dikerjakan, sehingga bagian Analysis, Recommendation, dan Impact di bawah masih kosong.
+**Status: SPC inti selesai (WIP, branch `project-15-build`). Dashboard dan GitHub Actions belum.**
+
+**Status awal: Design (rancangan).** Halaman rancangan ada di [`index.html`](index.html). Analisis, dashboard, dan angka hasil belum dikerjakan, sehingga bagian Analysis, Recommendation, dan Impact di bawah masih kosong.
 
 **Tujuan:** membangun dashboard SPC yang memantau kekuatan ikatan glue pada perekatan lensa lampu depan sepeda motor dari hasil force push test, untuk mendeteksi proses yang mulai keluar kendali atau Cpk yang turun di bawah 1,33 sebelum banyak produk NG terbentuk, dengan alert otomatis.
 
@@ -27,7 +29,32 @@ Rancangan memecahnya menjadi 14 pertanyaan (9 Utama, 4 Pendukung, 1 Tambahan) da
 
 ## 3. Analysis
 
-Belum dikerjakan. Rencana langkah (12 langkah, tahap A sampai D) ada di bagian 6 halaman rancangan: X-bar/R chart, p-chart, Cp/Cpk dan rolling Cpk, uji normalitas, aturan alert (Western Electric rules), dan evaluasi false alarm.
+Data simulasi (600 run, 2.988 sampel valid, 592 run dipakai). Angka dari `src/02_spc.py` dan validasi di `src/03_validate.py`. Asumsi di `docs/definitions.md`. Semua data simulasi (karangan).
+
+**Hasil (fase baseline 1 sampai 14 April 2026, limit diterapkan ke seluruh data):**
+
+- Cpk per aliran (baseline): Model A sesudah oven 2,63 (CI 2,28 sampai 2,97), Model A sebelum oven 2,19 (1,94 sampai 2,44), Model B sesudah oven 2,34 (2,03 sampai 2,65), Model B sebelum oven 1,98 (1,69 sampai 2,26).
+- Fakta 4 (sesudah oven lebih tinggi): selisih rata-rata Model A sebesar 1.366 g. Terkonfirmasi di Model A.
+- Fakta 1 (Model B sesudah oven turun bertahap): alert X-bar pertama 26 Mei 2026 (run pertama di jendela). Cpk bergulir di bawah 1,33 pertama kali 30 Mei 2026. Sesuai ground truth.
+- Fakta 2 (Model A sebelum oven turun mendadak di Shift 2, 1–3 Mei): hanya 2 run di jendela, terdeteksi di run pertama (2 Mei). Jumlah run terlalu kecil untuk kesimpulan kuat.
+- Fakta 3 (PT-02 sebaran membesar, 15–28 April): alert R-chart dan X-bar muncul di keempat aliran. Terdeteksi di run pertama atau dalam beberapa run.
+- Fakta 5 (data kotor): 15 file dengan entri log, sesuai ground truth.
+- False alarm di luar jendela fault: 2,3% run (9 dari 391) untuk X-bar, 0,5% (2 dari 391) untuk R.
+- Monte Carlo (2.000 replikasi, limit dari baseline): ARL0 sekitar 180 run (false alarm 0,56% per run). ARL1: 10,8 run untuk pergeseran 1σ, 3,3 untuk 2σ, 1,6 untuk 3σ.
+
+**Catatan:** hasil ini dari data simulasi. Nilainya membuktikan metode bekerja pada fault yang ditanam, bukan kondisi pabrik nyata.
+
+## 4. Recommendation
+
+Belum dikerjakan (menunggu dashboard dan aturan alert final).
+
+## 5. Impact
+
+Belum dikerjakan. Rumus yang akan dipakai (semua hasil diberi label `estimated` / `simulated`):
+
+```
+NG terhindari = run sebelum alert × unit per run × rate NG
+```
 
 Fakta yang sengaja ditanam di data simulasi (ground truth):
 1. Model B sesudah oven turun bertahap ±1 minggu sampai Cpk < 1,33 dan muncul beberapa NG.
@@ -54,6 +81,21 @@ NG terhindari = run sebelum alert × unit per run × rate NG
 - Distribusi kekuatan ikatan belum tentu normal.
 - Uji destruktif membatasi jumlah sampel.
 - Alert menunjukkan perubahan, bukan penyebab.
+
+## Status pengerjaan (WIP)
+
+| Item | Status |
+|---|---|
+| Generator data simulasi (`scripts/generate_push_test.py`) | selesai, 600 file, seed 15260401, dijalankan ulang |
+| Ingest dan cleaning (`src/01_ingest_clean.py`) | selesai, log di `outputs/parse_log.csv` |
+| SPC: limit baseline, Western Electric, Cp/Cpk CI, Cpk bergulir (`src/02_spc.py`) | selesai |
+| Validasi ground truth dan ARL (`src/03_validate.py`) | selesai |
+| Sensitivitas baseline 7 dan 21 hari | belum |
+| Load ke DuckDB dan SQL | belum |
+| Dashboard Streamlit 4 halaman + AppTest | belum |
+| GitHub Actions alert (opsional) | belum; belum dijalankan di GitHub |
+| `report_lib.py`, `report.css`, `check_std` dari Project-4 | belum |
+| Uji dari nol dua kali | belum |
 
 ## Struktur repository
 

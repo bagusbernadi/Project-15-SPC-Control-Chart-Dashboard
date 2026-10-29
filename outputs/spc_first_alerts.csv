@@ -1,0 +1,9 @@
+stream,chart,n_alert,first_run,first_date
+Model A | after_oven,R (>UCL),3,R0116,2026-04-17
+Model A | after_oven,xbar (WE),7,R0111,2026-04-16
+Model A | before_oven,R (>UCL),4,R0101,2026-04-15
+Model A | before_oven,xbar (WE),6,R0184,2026-04-27
+Model B | after_oven,R (>UCL),3,R0114,2026-04-17
+Model B | after_oven,xbar (WE),56,R0106,2026-04-16
+Model B | before_oven,R (>UCL),4,R0107,2026-04-16
+Model B | before_oven,xbar (WE),4,R0088,2026-04-13

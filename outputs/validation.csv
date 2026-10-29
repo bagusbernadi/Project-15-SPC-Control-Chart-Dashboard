@@ -1,0 +1,18 @@
+cek,fault,stream,n_run_di_jendela,alert_xbar_pertama,run_ke_alert_xbar,alert_R_pertama,n_alert_xbar_di_jendela,n_alert_R_di_jendela
+deteksi,F1 Model B after_oven drift,Model B | after_oven,52,2026-05-26,1,,52.0,0
+deteksi,F2 Model A before_oven mendadak (Shift 2),Model A | before_oven,2,2026-05-02,1,2026-05-02,2.0,1
+deteksi,F3 PT-02 sebaran membesar,Model A | after_oven,13,2026-04-21,8,2026-04-17,3.0,3
+deteksi,F3 PT-02 sebaran membesar,Model A | before_oven,11,2026-04-27,11,2026-04-15,1.0,3
+deteksi,F3 PT-02 sebaran membesar,Model B | after_oven,10,2026-04-16,1,2026-04-17,3.0,2
+deteksi,F3 PT-02 sebaran membesar,Model B | before_oven,16,2026-04-15,1,2026-04-16,1.0,3
+false_alarm,di luar jendela,Model A | after_oven,120,,,,4.0,0
+false_alarm,di luar jendela,Model A | before_oven,94,,,,3.0,0
+false_alarm,di luar jendela,Model B | after_oven,57,,,,1.0,1
+false_alarm,di luar jendela,Model B | before_oven,120,,,,1.0,1
+false_alarm_rate,semua aliran di luar jendela,gabungan,391,0.0230,,0.0051,9.0,2
+cpk_rolling_below_1_33,,Model A | after_oven,127,,,,0.0,
+cpk_rolling_below_1_33,,Model A | before_oven,109,,,,0.0,
+cpk_rolling_below_1_33,,Model B | after_oven,113,2026-05-30,,,45.0,
+cpk_rolling_below_1_33,,Model B | before_oven,127,,,,0.0,
+file_kotor,ground truth 15 file,data,600,,,,15.0,
+fakta4_after_gt_before,Model A,Model A,,,,,1365.7,

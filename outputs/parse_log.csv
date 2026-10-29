@@ -1,0 +1,28 @@
+run_id,file,sample_no,raw_value,aksi,alasan
+R0010,R0010_ModelB_SetelahOven.csv,2,"9058,3",dibuang,nomor sampel ganda
+R0068,R0068_ModelA_SebelumOven.csv,,,run dikecualikan,"n valid = 4, butuh 5"
+R0068,R0068_ModelA_SebelumOven.csv,4,"0,0",dibuang,nomor sampel ganda
+R0103,R0103_ModelB_SetelahOven.csv,,,run dikecualikan,"n valid = 4, butuh 5"
+R0103,R0103_ModelB_SetelahOven.csv,1,"0,0",dibuang,nol gram
+R0144,R0144_ModelB_SebelumOven.csv,,,run dikecualikan,"n valid = 3, butuh 5"
+R0144,R0144_ModelB_SebelumOven.csv,5,"0,0",dibuang,nol gram
+R0144,R0144_ModelB_SebelumOven.csv,5,"6373,1",dibuang,nomor sampel ganda
+R0234,R0234_ModelB_SebelumOven.csv,4,"5813,3",dibuang,nomor sampel ganda
+R0335,R0335_ModelA_SebelumOven.csv,3,"7545,0",dibuang,nomor sampel ganda
+R0340,R0340_ModelA_SebelumOven.csv,1,"6284,0",dibuang,nomor sampel ganda
+R0350,R0350_ModelB_SebelumOven.csv,,,run dikecualikan,"n valid = 4, butuh 5"
+R0350,R0350_ModelB_SebelumOven.csv,3,,dibuang,nomor sampel ganda
+R0360,R0360_ModelB_SetelahOven.csv,1,"8639,3",dibuang,nomor sampel ganda
+R0389,R0389_ModelA_SebelumOven.csv,3,"9027,5",dibuang,nomor sampel ganda
+R0429,R0429_ModelA_SebelumOven.csv,,,run dikecualikan,"n valid = 4, butuh 5"
+R0429,R0429_ModelA_SebelumOven.csv,3,"0,0",dibuang,nomor sampel ganda
+R0436,R0436_ModelA_SebelumOven.csv,,,run dikecualikan,"n valid = 3, butuh 5"
+R0436,R0436_ModelA_SebelumOven.csv,4,"0,0",dibuang,nol gram
+R0436,R0436_ModelA_SebelumOven.csv,4,"8307,4",dibuang,nomor sampel ganda
+R0479,R0479_ModelB_SebelumOven.csv,5,"6297,4",dibuang,nomor sampel ganda
+R0523,R0523_ModelB_SebelumOven.csv,,,run dikecualikan,"n valid = 3, butuh 5"
+R0523,R0523_ModelB_SebelumOven.csv,5,"0,0",dibuang,nol gram
+R0523,R0523_ModelB_SebelumOven.csv,5,"7820,5",dibuang,nomor sampel ganda
+R0550,R0550_ModelB_SetelahOven.csv,,,run dikecualikan,"n valid = 3, butuh 5"
+R0550,R0550_ModelB_SetelahOven.csv,5,"0,0",dibuang,nol gram
+R0550,R0550_ModelB_SetelahOven.csv,5,"2470,8",dibuang,nomor sampel ganda
