@@ -2,6 +2,8 @@
 
 # Project 15: SPC Control Chart & Capability Dashboard with Automated Alerts
 
+**Halaman web:** https://bagusbernadi.github.io/Project-15-SPC-Control-Chart-Dashboard/
+
 **Status: Analisis dan dashboard selesai (WIP, branch `project-15-build`). Belum di-deploy. GitHub Actions dan `check_std` belum.**
 
 **Status awal: Design (rancangan).** Halaman rancangan ada di [`index.html`](index.html). Analisis, dashboard, dan angka hasil belum dikerjakan, sehingga bagian Analysis, Recommendation, dan Impact di bawah masih kosong.
